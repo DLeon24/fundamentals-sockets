@@ -1,7 +1,7 @@
 {
-  "name": "08-socket-basico",
+  "name": "fundamentals-sockets",
   "version": "1.0.0",
-  "description": "",
+  "description": "Real-time messaging server with Express and Socket.IO",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

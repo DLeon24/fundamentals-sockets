@@ -4,7 +4,7 @@ io.on('connection', (client) => {
   console.log('User connected');
   client.emit('sendMessage', {
     user: 'Admin',
-    message: 'Welcome to his app',
+    message: 'Welcome to this app',
   });
 
   client.on('disconnect', () => {
@@ -15,14 +15,15 @@ io.on('connection', (client) => {
     console.log(data);
 
     client.broadcast.emit('sendMessage', data);
-    /*if (message.user) {
+
+    if (data.user) {
       callback({
-        resp: 'Everything its ok!',
+        resp: 'Message sent successfully!',
       });
     } else {
       callback({
-        resp: 'Everything its bad!',
+        resp: 'Error: user is required',
       });
-    }*/
+    }
   });
 });
